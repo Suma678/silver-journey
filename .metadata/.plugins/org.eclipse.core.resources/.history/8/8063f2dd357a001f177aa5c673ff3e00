@@ -1,0 +1,33 @@
+package com;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+
+/*
+ Launch browser
+ Open URL https://www.amazon.in/home
+ Validate the title "Amazon"
+ close browser		
+ */
+
+
+public class MyFirstTestCase {
+
+	public static void main(String[] args) {
+
+		//Launch Browser
+		WebDriver driver = new ChromeDriver(); 
+		
+		driver.get("https://www.amazon.in/home");
+		
+		String actualtitle = driver.getTitle();
+		
+		if(actualtitle.equals("Amazon")) {
+			
+			System.out.println("Test Passed");
+		}
+		else {
+			System.out.println("Test Failed");
+		}
+	}
+}

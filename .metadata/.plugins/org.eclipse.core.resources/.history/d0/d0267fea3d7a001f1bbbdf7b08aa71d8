@@ -1,0 +1,28 @@
+package com;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+/*
+ Launch browser
+ Open URL https://www.amazon.in/home
+ Validate the title "Amazon"
+ close browser		
+ */
+
+public class MyFirstTestCase {
+
+	public static void main(String[] args) {
+
+		// Launch Browser
+		WebDriver driver = new FirefoxDriver();
+
+		driver.get("https://www.amazon.in");
+
+		String title = driver.getTitle();
+
+		System.out.println("Page Title: " + title);
+
+		driver.close();
+	}
+}
